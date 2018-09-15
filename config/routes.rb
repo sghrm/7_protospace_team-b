@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   resources :prototypes, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   resources :users, only: [:show, :edit, :update]
+  resources :newest, only: :index
+  resources :popular, only: :index
 end
