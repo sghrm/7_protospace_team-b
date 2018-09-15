@@ -8,11 +8,11 @@
       %ul.nav.nav-pills.col-lg-11
         %li.btn-default.btn-popular
           = link_to "Popular", popular_index_path
-        %li.btn-default.btn-popular
-          = link_to "Newest", newest_index_path
+        %li.btn-default.btn-newest
+          = link_to "Newest", newest_index_path, remote:true
       = link_to "VIEW TAGS", "#", class: "btn btn-default col-lg-1"
 
-.container.proto-list
+.container.proto-list#masonry-container
   .row
     = render partial: 'prototypes/prototype', collection: @prototypes
 
