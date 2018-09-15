@@ -655,3 +655,26 @@ body {
   height: 100%;
   width: 100%;
 }
+/* -- comment ------------------------------------ */
+
+.comment {
+  height: 65px;
+  width: 700px;
+  background-color: white;
+  .comment-text {
+    position: relative;
+    left: 20px;
+    top: 10px;
+  }
+  .comment-send {
+    float: right;
+    position: relative;
+    right: 10px;
+    bottom: 35px;
+  }
+}
+#comment {
+  height: 45px;
+  width: 540px;
+  background-color: white;
+}

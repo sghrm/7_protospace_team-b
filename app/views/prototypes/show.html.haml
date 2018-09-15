@@ -42,3 +42,9 @@
           %a{href: "#", class: "btn btn-default"} iPad
         %li
           %a{href: "#", class: "btn btn-default"} wireframe
+  .comment
+    = form_for @prototype do |f|
+      .comment-text
+        = f.text_field :comments, required: true, autofocus: true, placeholder: "comment",id: "comment"
+      .comment-send
+        = f.submit "COMMENT", id: "button", class: "btn btn-lg btn-primary btn-block"
