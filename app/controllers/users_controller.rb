@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def show
-    @prototypes = @user.prototypes
+    # @prototypes = @user.prototypes
+    @user = User.find_by(id: params[:id])
   end
 
   def edit

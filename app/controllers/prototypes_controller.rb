@@ -30,6 +30,9 @@ class PrototypesController < ApplicationController
   end
 
   def show
+    @prototype = Prototype.find_by(id: params[:id])
+    @user = @prototype.user
+    @likes_count = Like.where(prototype_id: @prototype.id).count
     @comment = Comment.new
     @comments = @prototype.comments.includes(:user)
   end
