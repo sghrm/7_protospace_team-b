@@ -35,9 +35,8 @@ $(function() {
       json.forEach(function(data) {
         var html = '';
         html += buildHTML(data);
-      $('#masonry-container').append(html);
-      console.log(html);
-    })
+        $('#masonry-container').append(html);
+      })
     });
   });
 });
