@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
-    #binding.pry
-  Comment.create(comment_params)
-    #binding.pry
-    redirect_to root_path
+      Comment.create(comment_params)
+      redirect_to root_path
   end
 
   private
