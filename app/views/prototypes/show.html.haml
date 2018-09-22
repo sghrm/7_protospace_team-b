@@ -43,8 +43,9 @@
         %li
           %a{href: "#", class: "btn btn-default"} wireframe
   .comment
-    = form_for @prototype do |f|
+    = form_for [@prototype, @comment] do |f|
       .comment-text
-        = f.text_field :comments, required: true, autofocus: true, placeholder: "comment",id: "comment"
+        = f.hidden_field :user_id, value: current_user.id
+        = f.text_field :text, required: true, autofocus: true, placeholder: "comment",id: "comment",value: ""
       .comment-send
-        = f.submit "COMMENT", id: "button", class: "btn btn-lg btn-primary btn-block"
+        = f.submit "COMMENT",path: "new_prototype_comment_path", id: "button", class: "btn btn-lg btn-primary btn-block"
