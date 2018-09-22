@@ -43,5 +43,16 @@
         .col-md-12
           %h4 Concept
           = f.text_area :concept, require: true, placeholder: "Input Concept"
+        .col-md-12
+          %h4 Tag List
+          .row
+            = f.fields_for :tags do |tag|
+              = hidden_field_tag(:prototype_id, @prototype.id)
+              .col-md-3
+              = tag.text_field :"0", placeholder: "ex) APPLE", id: "prototype_tags_0"
+              .col-md-3
+              = tag.text_field :"1", placeholder: "ex) ORANGE", id: "prototype_tags_1"
+              .col-md-3
+              = tag.text_field :"2", placeholder: "ex) BANANA", id: "prototype_tags_2"
       .row.text-center.proto-btn
         = f.submit "PUBLISH", id: "button", class: "btn btn-lg btn-primary btn-block"
