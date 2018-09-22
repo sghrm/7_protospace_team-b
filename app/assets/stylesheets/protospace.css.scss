@@ -673,8 +673,21 @@ body {
     bottom: 35px;
   }
 }
+.comments {
+  height: 50px;
+  width: 700px;
+  font-size: 30px;
+}
+.comments-box {
+  .comments-box-texts {
+    font-size: 20px;
+  }
+}
 #comment {
   height: 45px;
   width: 540px;
   background-color: white;
+}
+ul {
+  list-style: none;
 }
