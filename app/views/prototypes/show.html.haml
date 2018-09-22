@@ -50,9 +50,9 @@
       .comment-send
         = f.submit "COMMENT",path: "new_prototype_comment_path", id: "button", class: "btn btn-lg btn-primary btn-block"
   .comments
-    All comments
+    < All comments >
   %ul.comments-box
-    - @prototype.comments.each do |comment|
+    - @comments.each do |comment|
       %li.comments-box-texts
         = comment.text
 

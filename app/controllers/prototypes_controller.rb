@@ -2,7 +2,7 @@ class PrototypesController < ApplicationController
   before_action :set_prototype, only: [:show, :edit, :update]
 
   def index
-    @prototypes = Prototype.all
+    @prototypes = Prototype.includes(:user)
   end
 
   def new
@@ -28,6 +28,7 @@ class PrototypesController < ApplicationController
 
   def show
     @comment = Comment.new
+    @comments = @prototype.comments.includes(:user)
   end
 
   def edit
