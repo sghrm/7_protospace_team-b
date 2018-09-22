@@ -42,3 +42,20 @@
           %a{href: "#", class: "btn btn-default"} iPad
         %li
           %a{href: "#", class: "btn btn-default"} wireframe
+  .comment
+    = form_for [@prototype, @comment] do |f|
+      .comment-text
+        = f.hidden_field :user_id
+        = f.text_field :text, required: true, autofocus: true, placeholder: "comment",id: "comment",value: ""
+      .comment-send
+        = f.submit "COMMENT",path: "new_prototype_comment_path", id: "button", class: "btn btn-lg btn-primary btn-block"
+  .comments
+    < All comments >
+  %ul.comments-box
+    - @comments.each do |comment|
+      %li.comments-box-texts
+        %p.comments-box-texts-name
+          = comment.user.name
+        %p.comments-box-texts-text
+          = comment.text
+
