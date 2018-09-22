@@ -655,6 +655,49 @@ body {
   height: 100%;
   width: 100%;
 }
+/* -- comment ------------------------------------ */
+
+.comment {
+  height: 65px;
+  width: 700px;
+  background-color: white;
+  .comment-text {
+    position: relative;
+    left: 20px;
+    top: 10px;
+  }
+  .comment-send {
+    float: right;
+    position: relative;
+    right: 10px;
+    bottom: 35px;
+  }
+}
+.comments {
+  height: 50px;
+  width: 700px;
+  font-size: 30px;
+}
+.comments-box {
+  .comments-box-texts {
+    font-size: 20px;
+  }
+}
+.comments-box-texts-name {
+  font-size: 18px;
+}
+.comments-box-texts-text {
+  font-size: 16px;
+}
+#comment {
+  height: 45px;
+  width: 540px;
+  background-color: white;
+}
+ul {
+  list-style: none;
+}
+
 /* -- like ------------------------------------ */
 .text-right{
   width: 100px;

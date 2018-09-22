@@ -4,7 +4,6 @@ class CapturedImage < ActiveRecord::Base
   mount_uploader :content, PrototypeImageUploader
 
   enum status: %i(main sub)
-  # enum status: { main: 0, sub: 1 }
 
   validates :content,
             :status,
