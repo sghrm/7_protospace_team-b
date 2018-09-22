@@ -18,4 +18,3 @@ module Miuraspace
     end
   end
 end
-
