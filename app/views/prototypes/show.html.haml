@@ -54,6 +54,8 @@
   %ul.comments-box
     - @comments.each do |comment|
       %li.comments-box-texts
-        = comment.user.name
-        = comment.text
+        %p.comments-box-texts-name
+          = comment.user.name
+        %p.comments-box-texts-text
+          = comment.text
 

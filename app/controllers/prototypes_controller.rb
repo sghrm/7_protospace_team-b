@@ -14,7 +14,6 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
       redirect_to :root, notice: 'New prototype was successfully created'
-      #binding.pry
     else
       redirect_to ({ action: :new }), alert: 'New prototype was unsuccessfully created'
      end
