@@ -635,3 +635,15 @@ body {
   color: #a94442;
 }
 
+.text-right{
+  width: 100px;
+  height: 39px;
+  float: right;
+  .like-btn{
+    color: #8899a6;
+  }
+  .like-btn-unlike{
+    color: #ff2581;
+  }
+}
+
